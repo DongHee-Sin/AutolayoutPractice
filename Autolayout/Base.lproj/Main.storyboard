@@ -19,8 +19,31 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sst-F9-FGa" userLabel="쿠팡 아이콘">
                                 <rect key="frame" x="130" y="49" width="154" height="48"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="작아진 쿠팡 로고"/>
+                                <buttonConfiguration key="configuration" style="plain" image="작아진 쿠팡 로고">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="검색 아이콘" translatesAutoresizingMaskIntoConstraints="NO" id="enG-JG-7nS">
+                                <rect key="frame" x="20" y="109" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="RCC-lV-qVW"/>
+                                    <constraint firstAttribute="height" constant="22" id="rYW-ki-Rmp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnQ-pu-0yA">
+                                <rect key="frame" x="10" y="104" width="394" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쿠팡에서 검색하세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmn-IN-gG3" userLabel="검색버튼 텍스트">
+                                <rect key="frame" x="50" y="109.5" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQO-7e-rAI" userLabel="알림 종">
                                 <rect key="frame" x="359" y="51" width="50" height="44"/>
                                 <state key="normal" title="Button"/>
@@ -28,34 +51,41 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="15"/>
                                 </buttonConfiguration>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3F-Zj-Smb" userLabel="검색창">
-                                <rect key="frame" x="10" y="108" width="394" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="검색 아이콘" translatesAutoresizingMaskIntoConstraints="NO" id="enG-JG-7nS">
-                                <rect key="frame" x="20" y="114" width="22" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="22" id="RCC-lV-qVW"/>
-                                    <constraint firstAttribute="height" constant="22" id="rYW-ki-Rmp"/>
-                                </constraints>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJB-Wv-Ed8">
+                                <rect key="frame" x="0.0" y="144" width="414" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="8Vx-jY-mBE"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="1aH-WU-jw7"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="s3t-Zq-ADZ">
+                                <rect key="frame" x="149" y="326" width="116" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" red="0.52519424530000003" green="0.5292307503" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="c3F-Zj-Smb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JcM-mq-MKb"/>
-                            <constraint firstItem="c3F-Zj-Smb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Nu9-QF-cW7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c3F-Zj-Smb" secondAttribute="trailing" constant="10" id="SsI-8U-m3m"/>
+                            <constraint firstItem="Zmn-IN-gG3" firstAttribute="centerY" secondItem="nnQ-pu-0yA" secondAttribute="centerY" id="3Z8-oM-yqh"/>
+                            <constraint firstItem="enG-JG-7nS" firstAttribute="leading" secondItem="nnQ-pu-0yA" secondAttribute="leading" constant="10" id="774-ho-oSX"/>
+                            <constraint firstItem="nnQ-pu-0yA" firstAttribute="top" secondItem="Sst-F9-FGa" secondAttribute="bottom" constant="7" id="CEW-Rk-LAP"/>
+                            <constraint firstItem="nnQ-pu-0yA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RcU-Bh-Jue"/>
                             <constraint firstItem="qQO-7e-rAI" firstAttribute="centerY" secondItem="Sst-F9-FGa" secondAttribute="centerY" id="Szg-LH-zgn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qQO-7e-rAI" secondAttribute="trailing" constant="5" id="X76-JU-zLd"/>
+                            <constraint firstItem="enG-JG-7nS" firstAttribute="centerY" secondItem="nnQ-pu-0yA" secondAttribute="centerY" id="Zcw-eW-Lx6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nnQ-pu-0yA" secondAttribute="trailing" constant="10" id="aBn-Ne-ZWL"/>
                             <constraint firstItem="Sst-F9-FGa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="ce9-Qf-04x"/>
-                            <constraint firstItem="enG-JG-7nS" firstAttribute="centerY" secondItem="c3F-Zj-Smb" secondAttribute="centerY" id="dHZ-rS-AHj"/>
-                            <constraint firstItem="enG-JG-7nS" firstAttribute="leading" secondItem="c3F-Zj-Smb" secondAttribute="leading" constant="10" id="jAD-Nm-2tW"/>
+                            <constraint firstItem="Zmn-IN-gG3" firstAttribute="leading" secondItem="nnQ-pu-0yA" secondAttribute="leading" constant="40" id="mDr-1y-Nw4"/>
                             <constraint firstItem="Sst-F9-FGa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nGD-FP-88B"/>
-                            <constraint firstItem="c3F-Zj-Smb" firstAttribute="firstBaseline" secondItem="Sst-F9-FGa" secondAttribute="baseline" constant="40" id="pcp-LG-FRF"/>
+                            <constraint firstItem="nnQ-pu-0yA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="nPj-VH-ZRy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="commercialPageControl" destination="s3t-Zq-ADZ" id="peQ-hx-Q05"/>
+                        <outlet property="commercialScrollView" destination="bJB-Wv-Ed8" id="AQW-5g-E8s"/>
+                        <outlet property="searchButton" destination="nnQ-pu-0yA" id="SgD-EY-LFJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -66,6 +96,9 @@
         <image name="검색 아이콘" width="29" height="28"/>
         <image name="작아진 쿠팡 로고" width="130" height="34"/>
         <image name="종 아이콘-2" width="26" height="30"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
