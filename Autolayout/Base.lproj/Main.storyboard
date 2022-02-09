@@ -52,28 +52,31 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKT-cr-nMP" userLabel="메인광고ScrollView">
-                                                <rect key="frame" x="0.0" y="89" width="414" height="190"/>
+                                                <rect key="frame" x="0.0" y="89" width="414" height="207"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gq-O1-nef">
-                                                        <rect key="frame" x="0.0" y="0.0" width="2070" height="190"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="2070" height="207"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Wgb-GM-GJ7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="2070" height="190"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="2070" height="207"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="광고1" translatesAutoresizingMaskIntoConstraints="NO" id="hpZ-ps-qcp" userLabel="광고1">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="hpZ-ps-qcp" secondAttribute="height" multiplier="2:1" id="t1P-za-ZUB"/>
+                                                                        </constraints>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="광고2" translatesAutoresizingMaskIntoConstraints="NO" id="tij-9m-3Hr">
-                                                                        <rect key="frame" x="414" y="0.0" width="414" height="190"/>
+                                                                        <rect key="frame" x="414" y="0.0" width="414" height="207"/>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="광고3" translatesAutoresizingMaskIntoConstraints="NO" id="sVE-Xy-puA">
-                                                                        <rect key="frame" x="828" y="0.0" width="414" height="190"/>
+                                                                        <rect key="frame" x="828" y="0.0" width="414" height="207"/>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="광고4" translatesAutoresizingMaskIntoConstraints="NO" id="Kim-pN-nJ3">
-                                                                        <rect key="frame" x="1242" y="0.0" width="414" height="190"/>
+                                                                        <rect key="frame" x="1242" y="0.0" width="414" height="207"/>
                                                                     </imageView>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="광고5" translatesAutoresizingMaskIntoConstraints="NO" id="E49-qD-Ak3">
-                                                                        <rect key="frame" x="1656" y="0.0" width="414" height="190"/>
+                                                                        <rect key="frame" x="1656" y="0.0" width="414" height="207"/>
                                                                     </imageView>
                                                                 </subviews>
                                                             </stackView>
@@ -93,18 +96,17 @@
                                                     <constraint firstItem="7gq-O1-nef" firstAttribute="trailing" secondItem="SOq-Qv-kEc" secondAttribute="trailing" id="Prw-ae-rUP"/>
                                                     <constraint firstItem="7gq-O1-nef" firstAttribute="height" secondItem="i5y-Aw-Rdt" secondAttribute="height" id="ZBO-ry-7kq"/>
                                                     <constraint firstItem="7gq-O1-nef" firstAttribute="top" secondItem="SOq-Qv-kEc" secondAttribute="top" id="i6t-Xm-fjB"/>
-                                                    <constraint firstAttribute="height" constant="190" id="kjb-wR-eAf"/>
                                                     <constraint firstItem="7gq-O1-nef" firstAttribute="leading" secondItem="SOq-Qv-kEc" secondAttribute="leading" id="pDh-Pr-w8z"/>
                                                 </constraints>
                                                 <viewLayoutGuide key="contentLayoutGuide" id="SOq-Qv-kEc"/>
                                                 <viewLayoutGuide key="frameLayoutGuide" id="i5y-Aw-Rdt"/>
                                             </scrollView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="ToM-Sc-WCd">
-                                                <rect key="frame" x="132" y="253" width="150.5" height="26"/>
+                                                <rect key="frame" x="132" y="270" width="150.5" height="26"/>
                                                 <color key="pageIndicatorTintColor" systemColor="systemGray3Color"/>
                                             </pageControl>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2Y-uo-AfH" userLabel="아이콘ScrollView">
-                                                <rect key="frame" x="0.0" y="289" width="414" height="165.5"/>
+                                                <rect key="frame" x="0.0" y="306" width="414" height="165.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujz-8z-lh7">
                                                         <rect key="frame" x="0.0" y="0.0" width="662.5" height="165.5"/>
