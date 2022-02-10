@@ -11,6 +11,27 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var searchButton: UIButton!
     
+    let segmentImageArray: [String] = ["고등어", "리모컨", "목살", "반건조", "주스"]
+    
+    @IBOutlet weak var goldBoxStackView: UIStackView!
+    
+    
+    // 골드박스 Segment Controller
+    @IBAction func segmentAction(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            print(0)
+        case 1:
+            print(1)
+        default:
+            print(2)
+        }
+    }
+    
+    func enterImageToStackView(_ stackView: UIStackView, segmentIndex: Int) {
+        
+    }
+    
     
     
     override func viewDidLoad() {
