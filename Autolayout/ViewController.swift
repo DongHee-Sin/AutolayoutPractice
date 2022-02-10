@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var searchButton: UIButton!
     

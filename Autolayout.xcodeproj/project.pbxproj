@@ -13,6 +13,7 @@
 		D0C84C8E27B13C1700D54AED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C84C8C27B13C1700D54AED /* Main.storyboard */; };
 		D0C84C9027B13C1800D54AED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C84C8F27B13C1800D54AED /* Assets.xcassets */; };
 		D0C84C9327B13C1800D54AED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C84C9127B13C1800D54AED /* LaunchScreen.storyboard */; };
+		D0D49CC827B4C8C000370F37 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D49CC727B4C8C000370F37 /* MyTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D0C84C8F27B13C1800D54AED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0C84C9227B13C1800D54AED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0C84C9427B13C1800D54AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D49CC727B4C8C000370F37 /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				D0C84C8627B13C1700D54AED /* AppDelegate.swift */,
 				D0C84C8827B13C1700D54AED /* SceneDelegate.swift */,
 				D0C84C8A27B13C1700D54AED /* ViewController.swift */,
+				D0D49CC727B4C8C000370F37 /* MyTabBarController.swift */,
 				D0C84C8C27B13C1700D54AED /* Main.storyboard */,
 				D0C84C8F27B13C1800D54AED /* Assets.xcassets */,
 				D0C84C9127B13C1800D54AED /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0C84C8B27B13C1700D54AED /* ViewController.swift in Sources */,
+				D0D49CC827B4C8C000370F37 /* MyTabBarController.swift in Sources */,
 				D0C84C8727B13C1700D54AED /* AppDelegate.swift in Sources */,
 				D0C84C8927B13C1700D54AED /* SceneDelegate.swift in Sources */,
 			);
