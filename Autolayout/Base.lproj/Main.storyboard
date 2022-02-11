@@ -53,7 +53,7 @@
         <!--Search-->
         <scene sceneID="prH-J6-Quh">
             <objects>
-                <viewController id="0eP-E8-pjx" sceneMemberID="viewController">
+                <viewController id="0eP-E8-pjx" customClass="SearchViewController" customModule="Autolayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MpB-jp-1zt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,36 +65,343 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syp-af-7IM" userLabel="검색라인">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="62"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UWJ-QS-Swi">
-                                                        <rect key="frame" x="15" y="14.5" width="37.5" height="33.5"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.backward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UWJ-QS-Swi">
+                                                        <rect key="frame" x="15" y="27" width="33" height="29.5"/>
+                                                        <color key="tintColor" systemColor="systemGray3Color"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="UWJ-QS-Swi" secondAttribute="height" multiplier="1:1" id="Am2-XE-y26"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <searchBar contentMode="redraw" fixedFrame="YES" placeholder="검색어 입력" translatesAutoresizingMaskIntoConstraints="NO" id="iqA-4N-tJb">
-                                                        <rect key="frame" x="52" y="2" width="297" height="51"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="검색어 입력" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jFs-B0-4DS">
+                                                        <rect key="frame" x="58" y="21.5" width="290" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="jFs-B0-4DS" secondAttribute="height" multiplier="145:20" id="M4z-2Q-enJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
-                                                    </searchBar>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTn-SP-GaH">
+                                                        <rect key="frame" x="358" y="18.5" width="46" height="46"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="nTn-SP-GaH" secondAttribute="height" multiplier="1:1" id="4ZV-0I-U5O"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="취소">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="syp-af-7IM" secondAttribute="height" multiplier="400:60" id="9xQ-vp-LRM"/>
+                                                    <constraint firstAttribute="width" secondItem="syp-af-7IM" secondAttribute="height" multiplier="400:80" id="9xQ-vp-LRM"/>
+                                                    <constraint firstItem="jFs-B0-4DS" firstAttribute="leading" secondItem="UWJ-QS-Swi" secondAttribute="trailing" constant="10" id="CfW-Vh-Uqt"/>
+                                                    <constraint firstItem="jFs-B0-4DS" firstAttribute="centerY" secondItem="UWJ-QS-Swi" secondAttribute="centerY" id="KNY-ew-dEY"/>
+                                                    <constraint firstItem="nTn-SP-GaH" firstAttribute="centerY" secondItem="syp-af-7IM" secondAttribute="centerY" id="T4i-fU-QA4"/>
                                                     <constraint firstItem="UWJ-QS-Swi" firstAttribute="leading" secondItem="syp-af-7IM" secondAttribute="leading" constant="15" id="Xhr-u1-ePX"/>
                                                     <constraint firstItem="UWJ-QS-Swi" firstAttribute="centerY" secondItem="syp-af-7IM" secondAttribute="centerY" id="cKY-P4-SeQ"/>
-                                                    <constraint firstItem="UWJ-QS-Swi" firstAttribute="height" secondItem="syp-af-7IM" secondAttribute="height" multiplier="0.6" id="n7Y-RX-qnt"/>
+                                                    <constraint firstItem="nTn-SP-GaH" firstAttribute="leading" secondItem="jFs-B0-4DS" secondAttribute="trailing" constant="10" id="gwI-lq-fY4"/>
+                                                    <constraint firstItem="UWJ-QS-Swi" firstAttribute="height" secondItem="syp-af-7IM" secondAttribute="height" multiplier="0.4" id="n7Y-RX-qnt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="nTn-SP-GaH" secondAttribute="trailing" constant="10" id="w5z-P7-LHn"/>
+                                                    <constraint firstItem="jFs-B0-4DS" firstAttribute="width" secondItem="syp-af-7IM" secondAttribute="width" multiplier="0.7" id="yr5-RA-diD"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDv-QU-98x" userLabel="최근검색어View">
+                                                <rect key="frame" x="0.0" y="83" width="414" height="29.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 검색어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYV-R5-0AQ">
+                                                        <rect key="frame" x="15" y="5.5" width="69" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="점3개" translatesAutoresizingMaskIntoConstraints="NO" id="xfo-D5-6at">
+                                                        <rect key="frame" x="370" y="7.5" width="29" height="14.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="xfo-D5-6at" secondAttribute="height" multiplier="2:1" id="cjV-fG-XJ7"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="xfo-D5-6at" secondAttribute="trailing" constant="15" id="BRb-hz-19x"/>
+                                                    <constraint firstAttribute="width" secondItem="zDv-QU-98x" secondAttribute="height" multiplier="70:5" id="NxZ-0B-MS4"/>
+                                                    <constraint firstItem="xfo-D5-6at" firstAttribute="width" secondItem="zDv-QU-98x" secondAttribute="width" multiplier="0.07" id="V4p-w2-Ebc"/>
+                                                    <constraint firstItem="bYV-R5-0AQ" firstAttribute="centerY" secondItem="zDv-QU-98x" secondAttribute="centerY" id="khU-u1-bVy"/>
+                                                    <constraint firstItem="xfo-D5-6at" firstAttribute="centerY" secondItem="zDv-QU-98x" secondAttribute="centerY" id="xeF-Je-S2v"/>
+                                                    <constraint firstItem="bYV-R5-0AQ" firstAttribute="leading" secondItem="zDv-QU-98x" secondAttribute="leading" constant="15" id="zWJ-HJ-6ok"/>
+                                                </constraints>
+                                            </view>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JO-h5-IgR" userLabel="최근검색어 스크롤">
+                                                <rect key="frame" x="0.0" y="117.5" width="414" height="44"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sgJ-hZ-yqH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="658.5" height="44"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hjj-YM-RLE">
+                                                                <rect key="frame" x="0.0" y="0.0" width="658.5" height="44"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czY-So-7Rf">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="60.5" height="44"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="항정살">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugL-Ax-PhG">
+                                                                        <rect key="frame" x="70.5" y="0.0" width="167.5" height="44"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="아이폰12 정품 가죽케이스">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FK-WD-jyg">
+                                                                        <rect key="frame" x="248" y="0.0" width="100.5" height="44"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="휴대용 모니터">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuW-5b-Grj">
+                                                                        <rect key="frame" x="358.5" y="0.0" width="60.5" height="44"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="졸음껌">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuE-sY-oJO">
+                                                                        <rect key="frame" x="429" y="0.0" width="60.5" height="44"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="삼겹살">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d33-7t-xwL">
+                                                                        <rect key="frame" x="499.5" y="0.0" width="48.5" height="44"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="푸주">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9p-aT-AJg">
+                                                                        <rect key="frame" x="558" y="0.0" width="100.5" height="44"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="마라샹궈 소스">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="Hjj-YM-RLE" secondAttribute="trailing" id="BYX-Da-lhd"/>
+                                                            <constraint firstItem="Hjj-YM-RLE" firstAttribute="top" secondItem="sgJ-hZ-yqH" secondAttribute="top" id="D1k-3x-qC1"/>
+                                                            <constraint firstItem="Hjj-YM-RLE" firstAttribute="leading" secondItem="sgJ-hZ-yqH" secondAttribute="leading" id="Qjb-il-Wik"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Hjj-YM-RLE" secondAttribute="bottom" id="fvS-IK-kD9"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="sgJ-hZ-yqH" firstAttribute="bottom" secondItem="pkc-dF-gnn" secondAttribute="bottom" id="8by-8g-EF7"/>
+                                                    <constraint firstItem="sgJ-hZ-yqH" firstAttribute="trailing" secondItem="pkc-dF-gnn" secondAttribute="trailing" id="UuI-49-Oak"/>
+                                                    <constraint firstItem="sgJ-hZ-yqH" firstAttribute="top" secondItem="pkc-dF-gnn" secondAttribute="top" id="aqK-OP-pXd"/>
+                                                    <constraint firstItem="sgJ-hZ-yqH" firstAttribute="height" secondItem="Egj-DE-thT" secondAttribute="height" id="qlv-tC-mgr"/>
+                                                    <constraint firstItem="sgJ-hZ-yqH" firstAttribute="leading" secondItem="pkc-dF-gnn" secondAttribute="leading" id="qq9-WF-AQ6"/>
+                                                </constraints>
+                                                <viewLayoutGuide key="contentLayoutGuide" id="pkc-dF-gnn"/>
+                                                <viewLayoutGuide key="frameLayoutGuide" id="Egj-DE-thT"/>
+                                            </scrollView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PwL-du-rVd" userLabel="로켓프레시View">
+                                                <rect key="frame" x="0.0" y="170.5" width="414" height="30"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="프레시 로켓모양" translatesAutoresizingMaskIntoConstraints="NO" id="pT4-OW-dii">
+                                                        <rect key="frame" x="8" y="0.5" width="29" height="29"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="pT4-OW-dii" secondAttribute="height" multiplier="1:1" id="BzK-pi-PdS"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당일배송∙새벽배송되는 로켓프레시 상품" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXX-ts-UvL">
+                                                        <rect key="frame" x="44" y="7" width="206.5" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="KXX-ts-UvL" firstAttribute="centerY" secondItem="pT4-OW-dii" secondAttribute="centerY" id="80U-dz-L4f"/>
+                                                    <constraint firstItem="pT4-OW-dii" firstAttribute="width" secondItem="PwL-du-rVd" secondAttribute="width" multiplier="0.07" id="CDs-WF-zkK"/>
+                                                    <constraint firstItem="pT4-OW-dii" firstAttribute="centerY" secondItem="PwL-du-rVd" secondAttribute="centerY" id="d5Z-2X-HSb"/>
+                                                    <constraint firstItem="KXX-ts-UvL" firstAttribute="leading" secondItem="pT4-OW-dii" secondAttribute="trailing" constant="7" id="gCI-wg-FCC"/>
+                                                    <constraint firstItem="pT4-OW-dii" firstAttribute="leading" secondItem="PwL-du-rVd" secondAttribute="leading" constant="8" id="ltV-50-IJ3"/>
+                                                </constraints>
+                                            </view>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxO-Ef-Id9" userLabel="로켓프레시 스크롤">
+                                                <rect key="frame" x="0.0" y="205.5" width="414" height="31"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gC-B0-MA8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="616.5" height="31"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KXv-70-XaX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="616.5" height="31"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DU-a8-wJV" userLabel="햄">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="36.5" height="31"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" red="0.22745098039215686" green="0.58431372549019611" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="햄">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTE-s1-lmq" userLabel="햄">
+                                                                        <rect key="frame" x="46.5" y="0.0" width="60.5" height="31"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" red="0.2274509804" green="0.58431372550000005" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="베이글">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qs-wF-gv9" userLabel="햄">
+                                                                        <rect key="frame" x="117" y="0.0" width="60.5" height="31"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" red="0.2274509804" green="0.58431372550000005" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="토마토">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdx-fi-SNC" userLabel="햄">
+                                                                        <rect key="frame" x="187.5" y="0.0" width="60.5" height="31"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" red="0.2274509804" green="0.58431372550000005" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="애호박">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ8-bu-RJy" userLabel="햄">
+                                                                        <rect key="frame" x="258" y="0.0" width="72.5" height="31"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" red="0.2274509804" green="0.58431372550000005" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="휘핑크림">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdZ-LN-50a" userLabel="햄">
+                                                                        <rect key="frame" x="340.5" y="0.0" width="88.5" height="31"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" red="0.2274509804" green="0.58431372550000005" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="훈제 삼겹살">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwq-eZ-8fn" userLabel="햄">
+                                                                        <rect key="frame" x="439" y="0.0" width="60.5" height="31"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" red="0.2274509804" green="0.58431372550000005" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="요플레">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fx-sV-GmP" userLabel="햄">
+                                                                        <rect key="frame" x="509.5" y="0.0" width="48.5" height="31"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" red="0.2274509804" green="0.58431372550000005" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="버섯">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAm-3w-3rL" userLabel="햄">
+                                                                        <rect key="frame" x="568" y="0.0" width="48.5" height="31"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <color key="tintColor" red="0.2274509804" green="0.58431372550000005" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="항정살"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" title="사과">
+                                                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                                                        </buttonConfiguration>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="KXv-70-XaX" secondAttribute="bottom" id="B2F-DF-OE1"/>
+                                                            <constraint firstItem="KXv-70-XaX" firstAttribute="leading" secondItem="9gC-B0-MA8" secondAttribute="leading" id="LEE-Zl-pDx"/>
+                                                            <constraint firstAttribute="trailing" secondItem="KXv-70-XaX" secondAttribute="trailing" id="Rt2-Qo-ZMi"/>
+                                                            <constraint firstItem="KXv-70-XaX" firstAttribute="top" secondItem="9gC-B0-MA8" secondAttribute="top" id="gF5-UK-Z8U"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="9gC-B0-MA8" firstAttribute="height" secondItem="JOc-lk-jGH" secondAttribute="height" id="PE1-NU-Rig"/>
+                                                    <constraint firstItem="9gC-B0-MA8" firstAttribute="leading" secondItem="srB-aW-8Lv" secondAttribute="leading" id="efM-GC-c7t"/>
+                                                    <constraint firstItem="9gC-B0-MA8" firstAttribute="top" secondItem="srB-aW-8Lv" secondAttribute="top" id="gZR-UC-kAX"/>
+                                                    <constraint firstItem="9gC-B0-MA8" firstAttribute="bottom" secondItem="srB-aW-8Lv" secondAttribute="bottom" id="oKw-us-5aC"/>
+                                                    <constraint firstItem="9gC-B0-MA8" firstAttribute="trailing" secondItem="srB-aW-8Lv" secondAttribute="trailing" id="v2K-dA-dSx"/>
+                                                </constraints>
+                                                <viewLayoutGuide key="contentLayoutGuide" id="srB-aW-8Lv"/>
+                                                <viewLayoutGuide key="frameLayoutGuide" id="JOc-lk-jGH"/>
+                                            </scrollView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="syp-af-7IM" firstAttribute="top" secondItem="eaZ-nF-ESH" secondAttribute="top" id="7S2-eX-mYh"/>
+                                            <constraint firstAttribute="trailing" secondItem="PwL-du-rVd" secondAttribute="trailing" id="8lw-oO-g2g"/>
                                             <constraint firstAttribute="height" constant="1500" id="9zr-Ib-KhH"/>
+                                            <constraint firstItem="sgJ-hZ-yqH" firstAttribute="height" secondItem="zDv-QU-98x" secondAttribute="height" multiplier="1.5" id="I8k-VQ-Ve9"/>
+                                            <constraint firstItem="zDv-QU-98x" firstAttribute="leading" secondItem="eaZ-nF-ESH" secondAttribute="leading" id="IOi-oj-Gyf"/>
                                             <constraint firstItem="syp-af-7IM" firstAttribute="leading" secondItem="eaZ-nF-ESH" secondAttribute="leading" id="Jw9-To-oQS"/>
+                                            <constraint firstItem="1JO-h5-IgR" firstAttribute="leading" secondItem="eaZ-nF-ESH" secondAttribute="leading" id="Kfz-9f-1lk"/>
+                                            <constraint firstItem="PwL-du-rVd" firstAttribute="leading" secondItem="eaZ-nF-ESH" secondAttribute="leading" id="YjB-dD-5ar"/>
+                                            <constraint firstItem="TxO-Ef-Id9" firstAttribute="top" secondItem="PwL-du-rVd" secondAttribute="bottom" constant="5" id="a87-Tj-nqh"/>
+                                            <constraint firstAttribute="trailing" secondItem="zDv-QU-98x" secondAttribute="trailing" id="b6J-mg-3I5"/>
+                                            <constraint firstAttribute="trailing" secondItem="1JO-h5-IgR" secondAttribute="trailing" id="cTC-P4-Ao6"/>
+                                            <constraint firstItem="zDv-QU-98x" firstAttribute="top" secondItem="syp-af-7IM" secondAttribute="bottom" id="gJY-QT-lRD"/>
+                                            <constraint firstItem="PwL-du-rVd" firstAttribute="top" secondItem="1JO-h5-IgR" secondAttribute="bottom" constant="9" id="kxV-Jh-Xl4"/>
+                                            <constraint firstItem="PwL-du-rVd" firstAttribute="height" secondItem="zDv-QU-98x" secondAttribute="height" id="loC-fY-N0x"/>
                                             <constraint firstAttribute="trailing" secondItem="syp-af-7IM" secondAttribute="trailing" id="nYp-8J-oKW"/>
+                                            <constraint firstAttribute="trailing" secondItem="TxO-Ef-Id9" secondAttribute="trailing" id="qam-oY-dnm"/>
+                                            <constraint firstItem="TxO-Ef-Id9" firstAttribute="leading" secondItem="eaZ-nF-ESH" secondAttribute="leading" id="wQe-7G-QwF"/>
+                                            <constraint firstItem="1JO-h5-IgR" firstAttribute="top" secondItem="zDv-QU-98x" secondAttribute="bottom" constant="5" id="yF2-Jj-1ec"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -120,6 +427,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="HIO-Xr-ZaB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="recentSearchStackView" destination="Hjj-YM-RLE" id="cQo-VK-KP5"/>
+                        <outlet property="rocketFreshStackView" destination="KXv-70-XaX" id="gdt-RT-px0"/>
+                        <outlet property="searchBar" destination="jFs-B0-4DS" id="z4r-fh-GgI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="moh-aI-rcT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2054,7 +2366,7 @@
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
         <image name="cart" catalog="system" width="128" height="102"/>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="creditcard.and.123" catalog="system" width="128" height="90"/>
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
@@ -2100,6 +2412,7 @@
         <image name="쇼핑제안아이콘" width="636" height="726"/>
         <image name="에비뉴" width="201" height="201"/>
         <image name="작아진 쿠팡 로고" width="130" height="34"/>
+        <image name="점3개" width="646" height="222"/>
         <image name="정품가케" width="399" height="894"/>
         <image name="정품실케" width="418" height="894"/>
         <image name="정품투케" width="415" height="898"/>
@@ -2111,6 +2424,7 @@
         <image name="쿠팡이츠" width="201" height="201"/>
         <image name="쿠팡플레이" width="201" height="201"/>
         <image name="패션잡화" width="201" height="201"/>
+        <image name="프레시 로켓모양" width="188" height="216"/>
         <image name="한줄광고" width="1122" height="257"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

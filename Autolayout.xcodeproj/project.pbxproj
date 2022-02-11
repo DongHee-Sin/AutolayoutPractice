@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0B79CCE27B5FCC50077CAFD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B79CCD27B5FCC50077CAFD /* SearchViewController.swift */; };
 		D0C84C8727B13C1700D54AED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C84C8627B13C1700D54AED /* AppDelegate.swift */; };
 		D0C84C8927B13C1700D54AED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C84C8827B13C1700D54AED /* SceneDelegate.swift */; };
 		D0C84C8B27B13C1700D54AED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C84C8A27B13C1700D54AED /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0B79CCD27B5FCC50077CAFD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D0C84C8327B13C1700D54AED /* Autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C84C8627B13C1700D54AED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0C84C8827B13C1700D54AED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				D0C84C8827B13C1700D54AED /* SceneDelegate.swift */,
 				D0C84C8A27B13C1700D54AED /* ViewController.swift */,
 				D0D49CC727B4C8C000370F37 /* MyTabBarController.swift */,
+				D0B79CCD27B5FCC50077CAFD /* SearchViewController.swift */,
 				D0C84C8C27B13C1700D54AED /* Main.storyboard */,
 				D0C84C8F27B13C1800D54AED /* Assets.xcassets */,
 				D0C84C9127B13C1800D54AED /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				D0C84C8B27B13C1700D54AED /* ViewController.swift in Sources */,
 				D0D49CC827B4C8C000370F37 /* MyTabBarController.swift in Sources */,
 				D0C84C8727B13C1700D54AED /* AppDelegate.swift in Sources */,
+				D0B79CCE27B5FCC50077CAFD /* SearchViewController.swift in Sources */,
 				D0C84C8927B13C1700D54AED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
