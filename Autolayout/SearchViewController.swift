@@ -18,7 +18,9 @@ class SearchViewController: UIViewController {
     // 추천 검색어 버튼들
     @IBOutlet weak var recommendedSearchWordStackView: UIStackView!
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+          self.view.endEditing(true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +42,6 @@ class SearchViewController: UIViewController {
         // 추천 검색어 버튼들 속성 지정
         for eachStackView in recommendedSearchWordStackView.subviews as! [UIStackView] {
             for eachButton in eachStackView.subviews as! [UIButton] {
-                
-                
                 settingButton(button: eachButton)
             }
         }
