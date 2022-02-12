@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D004ADF427B6BF7400F39F84 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D004ADF327B6BF7400F39F84 /* BasketViewController.swift */; };
 		D08C480027B6589D003FE24C /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C47FF27B6589D003FE24C /* CategoryViewController.swift */; };
 		D0B79CCE27B5FCC50077CAFD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B79CCD27B5FCC50077CAFD /* SearchViewController.swift */; };
 		D0C84C8727B13C1700D54AED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C84C8627B13C1700D54AED /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D004ADF327B6BF7400F39F84 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
 		D08C47FF27B6589D003FE24C /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		D0B79CCD27B5FCC50077CAFD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D0C84C8327B13C1700D54AED /* Autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				D0B79CCD27B5FCC50077CAFD /* SearchViewController.swift */,
 				D08C47FF27B6589D003FE24C /* CategoryViewController.swift */,
 				D0C84C8C27B13C1700D54AED /* Main.storyboard */,
+				D004ADF327B6BF7400F39F84 /* BasketViewController.swift */,
 				D0C84C8F27B13C1800D54AED /* Assets.xcassets */,
 				D0C84C9127B13C1800D54AED /* LaunchScreen.storyboard */,
 				D0C84C9427B13C1800D54AED /* Info.plist */,
@@ -149,6 +152,7 @@
 			files = (
 				D0C84C8B27B13C1700D54AED /* ViewController.swift in Sources */,
 				D0D49CC827B4C8C000370F37 /* MyTabBarController.swift in Sources */,
+				D004ADF427B6BF7400F39F84 /* BasketViewController.swift in Sources */,
 				D0C84C8727B13C1700D54AED /* AppDelegate.swift in Sources */,
 				D0B79CCE27B5FCC50077CAFD /* SearchViewController.swift in Sources */,
 				D08C480027B6589D003FE24C /* CategoryViewController.swift in Sources */,

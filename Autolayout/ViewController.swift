@@ -57,6 +57,11 @@ class ViewController: UIViewController {
     }
     
     
+    // 하단약관박스
+    @IBOutlet weak var center: UILabel!
+    @IBOutlet weak var companyNumber: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,8 +71,6 @@ class ViewController: UIViewController {
         searchButton.layer.borderColor = UIColor(red:222/255, green:225/255, blue:227/255, alpha: 1).cgColor
         searchButton.layer.cornerRadius = 7
         
-        
-        // segment테스트
         
     }
 }
