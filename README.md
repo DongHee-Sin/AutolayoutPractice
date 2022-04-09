@@ -20,6 +20,8 @@
 * 코드 작성은 최소한으로
 * UITableView, UICollectionView 활용 X
 
+<br/>
+
 ### 사용한 컴포넌트
 * ScrollView
   * 전체 화면 스크롤 구현
